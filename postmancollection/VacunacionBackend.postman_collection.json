@@ -1,0 +1,505 @@
+{
+	"info": {
+		"_postman_id": "dc1815bb-2162-4941-9d18-b46b38c457ae",
+		"name": "VacunacionBackend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5082769"
+	},
+	"item": [
+		{
+			"name": "ROL ADMIN",
+			"item": [
+				{
+					"name": "EMPLOYEES",
+					"item": [
+						{
+							"name": "GetEmployeeById",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsibWl0b3Jlc291cmNlaWQiXSwidXNlcl9uYW1lIjoiYWRtaW5AZ21haWwuY29tIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sImV4cCI6MTY3MDI2MTgzOSwiYXV0aG9yaXRpZXMiOlsiQURNSU4iXSwianRpIjoiYjg2NTFlNzctMjJlOS00YThhLWJiN2YtYmJkZDcyYmQyMGE2IiwiY2xpZW50X2lkIjoiWmxMd214RER6VHl1In0.ZjMS0-QZghaTs6fMpRQ-vyC5PcuTwDRV3kHbtpshnKc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/employees/5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"employees",
+										"5"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FilterEmployees",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsibWl0b3Jlc291cmNlaWQiXSwidXNlcl9uYW1lIjoiYWRtaW5AZ21haWwuY29tIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sImV4cCI6MTY3MDI2MTgzOSwiYXV0aG9yaXRpZXMiOlsiQURNSU4iXSwianRpIjoiYjg2NTFlNzctMjJlOS00YThhLWJiN2YtYmJkZDcyYmQyMGE2IiwiY2xpZW50X2lkIjoiWmxMd214RER6VHl1In0.ZjMS0-QZghaTs6fMpRQ-vyC5PcuTwDRV3kHbtpshnKc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"vaccinateState\": 0\r\n}\r\n// {\r\n//     \"dateInit\": \"2022-10-04\",\r\n//     \"dateEnd\": \"2022-10-04\"\r\n// }\r\n// {\r\n//     \"vaccinateType\": 1\r\n// },\r\n// {\r\n//     \"vaccinateState\": 1\r\n// }\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/employees/find",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"employees",
+										"find"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateEmployee",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsibWl0b3Jlc291cmNlaWQiXSwidXNlcl9uYW1lIjoiYWRtaW5AZ21haWwuY29tIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sImV4cCI6MTY3MDI2MTgzOSwiYXV0aG9yaXRpZXMiOlsiQURNSU4iXSwianRpIjoiYjg2NTFlNzctMjJlOS00YThhLWJiN2YtYmJkZDcyYmQyMGE2IiwiY2xpZW50X2lkIjoiWmxMd214RER6VHl1In0.ZjMS0-QZghaTs6fMpRQ-vyC5PcuTwDRV3kHbtpshnKc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"idEmployee\": 5,\r\n        \"identification\": 1751031442,\r\n        \"names\": \"Alejandro ZM\",\r\n        \"lastNames\": \"Coronel Fabara\",\r\n        \"email\": \"alejo@gmail.com\",\r\n        \"idUser\": 3\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/employees",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"employees"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PostEmployee",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsibWl0b3Jlc291cmNlaWQiXSwidXNlcl9uYW1lIjoiYWRtaW5AZ21haWwuY29tIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sImV4cCI6MTY3MDI2MTgzOSwiYXV0aG9yaXRpZXMiOlsiQURNSU4iXSwianRpIjoiYjg2NTFlNzctMjJlOS00YThhLWJiN2YtYmJkZDcyYmQyMGE2IiwiY2xpZW50X2lkIjoiWmxMd214RER6VHl1In0.ZjMS0-QZghaTs6fMpRQ-vyC5PcuTwDRV3kHbtpshnKc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"identification\": 1707619167,\r\n    \"names\": \"Mercedes\",\r\n    \"lastNames\": \"Fabara\",\r\n    \"email\": \"srr@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/employees/admin",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"employees",
+										"admin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAllEmployeePageable",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsibWl0b3Jlc291cmNlaWQiXSwidXNlcl9uYW1lIjoiYWxlam9AZ21haWwuY29tIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sImV4cCI6MTY3MDI2MTA4MSwiYXV0aG9yaXRpZXMiOlsiRU1QTE9ZRUUiXSwianRpIjoiMjNhMjIzNGEtMDI2ZS00ZWE0LTkxZTMtMjdmZDU1NjY3Njk0IiwiY2xpZW50X2lkIjoiWmxMd214RER6VHl1In0.x3ubH8MzKToDlzAl3GoXhj4RPUVD5SqMFbxcXBTHve4",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/employees/pageable?page=0&size=10",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"employees",
+										"pageable"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "LogicalDeleteEmployee",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsibWl0b3Jlc291cmNlaWQiXSwidXNlcl9uYW1lIjoiYWRtaW5AZ21haWwuY29tIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sImV4cCI6MTY3MDI2MTgzOSwiYXV0aG9yaXRpZXMiOlsiQURNSU4iXSwianRpIjoiYjg2NTFlNzctMjJlOS00YThhLWJiN2YtYmJkZDcyYmQyMGE2IiwiY2xpZW50X2lkIjoiWmxMd214RER6VHl1In0.ZjMS0-QZghaTs6fMpRQ-vyC5PcuTwDRV3kHbtpshnKc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/employees/5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"employees",
+										"5"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "CATALOG",
+					"item": [
+						{
+							"name": "GetByParentId",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsibWl0b3Jlc291cmNlaWQiXSwidXNlcl9uYW1lIjoiYWxlam9AZ21haWwuY29tIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sImV4cCI6MTY3MDI2MTY4NCwiYXV0aG9yaXRpZXMiOlsiRU1QTE9ZRUUiXSwianRpIjoiOGIwNDMwYTItY2JiYy00ZTlkLThjOTgtYjA1YjViODlhNDUyIiwiY2xpZW50X2lkIjoiWmxMd214RER6VHl1In0.dovHekb86dMc_nNLgjBm3FWGH293sET12wOcVf4wq-4",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/catalogs/6",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"catalogs",
+										"6"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAllParent",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsibWl0b3Jlc291cmNlaWQiXSwidXNlcl9uYW1lIjoiYWxlam9AZ21haWwuY29tIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sImV4cCI6MTY3MDI2MTY4NCwiYXV0aG9yaXRpZXMiOlsiRU1QTE9ZRUUiXSwianRpIjoiOGIwNDMwYTItY2JiYy00ZTlkLThjOTgtYjA1YjViODlhNDUyIiwiY2xpZW50X2lkIjoiWmxMd214RER6VHl1In0.dovHekb86dMc_nNLgjBm3FWGH293sET12wOcVf4wq-4",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/catalogs/allParent",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"catalogs",
+										"allParent"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PostCatalogParent",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsibWl0b3Jlc291cmNlaWQiXSwidXNlcl9uYW1lIjoiYWxlam9AZ21haWwuY29tIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sImV4cCI6MTY3MDI2MTY4NCwiYXV0aG9yaXRpZXMiOlsiRU1QTE9ZRUUiXSwianRpIjoiOGIwNDMwYTItY2JiYy00ZTlkLThjOTgtYjA1YjViODlhNDUyIiwiY2xpZW50X2lkIjoiWmxMd214RER6VHl1In0.dovHekb86dMc_nNLgjBm3FWGH293sET12wOcVf4wq-4",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"PROPIO\",\r\n    \"parentId\": null\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/catalogs",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"catalogs"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PostCatalogChildren",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsibWl0b3Jlc291cmNlaWQiXSwidXNlcl9uYW1lIjoiYWxlam9AZ21haWwuY29tIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sImV4cCI6MTY3MDI2MTY4NCwiYXV0aG9yaXRpZXMiOlsiRU1QTE9ZRUUiXSwianRpIjoiOGIwNDMwYTItY2JiYy00ZTlkLThjOTgtYjA1YjViODlhNDUyIiwiY2xpZW50X2lkIjoiWmxMd214RER6VHl1In0.dovHekb86dMc_nNLgjBm3FWGH293sET12wOcVf4wq-4",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"dsadas\",\r\n    \"parentId\": 6\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/catalogs",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"catalogs"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteCatalog",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsibWl0b3Jlc291cmNlaWQiXSwidXNlcl9uYW1lIjoiYWxlam9AZ21haWwuY29tIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sImV4cCI6MTY3MDI2MTY4NCwiYXV0aG9yaXRpZXMiOlsiRU1QTE9ZRUUiXSwianRpIjoiOGIwNDMwYTItY2JiYy00ZTlkLThjOTgtYjA1YjViODlhNDUyIiwiY2xpZW50X2lkIjoiWmxMd214RER6VHl1In0.dovHekb86dMc_nNLgjBm3FWGH293sET12wOcVf4wq-4",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/catalogs/8",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"catalogs",
+										"8"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "ROL EMPLOYEE",
+			"item": [
+				{
+					"name": "GetEmployeeByEmail",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsibWl0b3Jlc291cmNlaWQiXSwidXNlcl9uYW1lIjoiYWRtaW5AZ21haWwuY29tIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sImV4cCI6MTY3MDI2MTM3MywiYXV0aG9yaXRpZXMiOlsiQURNSU4iXSwianRpIjoiODQ1ODdmNjAtMWRkOC00NGEwLTllOTgtMTQxZjc1YzAzNzM5IiwiY2xpZW50X2lkIjoiWmxMd214RER6VHl1In0.E2xxtRqgFq0gnviXGvo-yEflBVfAwZUWO1B4IV5VCak",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"alejo@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/employees/getByEmail",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employees",
+								"getByEmail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateEmployee",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsibWl0b3Jlc291cmNlaWQiXSwidXNlcl9uYW1lIjoiYWRtaW5AZ21haWwuY29tIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sImV4cCI6MTY3MDI2MTM3MywiYXV0aG9yaXRpZXMiOlsiQURNSU4iXSwianRpIjoiODQ1ODdmNjAtMWRkOC00NGEwLTllOTgtMTQxZjc1YzAzNzM5IiwiY2xpZW50X2lkIjoiWmxMd214RER6VHl1In0.E2xxtRqgFq0gnviXGvo-yEflBVfAwZUWO1B4IV5VCak",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idEmployee\": 5,\r\n    \"identification\": 1751031442,\r\n    \"names\": \"danny\",\r\n    \"lastNames\": \"luna\",\r\n    \"email\": \"dann1@gmail.com\",\r\n    \"birthDate\": \"1999-10-04\",\r\n    \"address\": \"Norte de Quito\",\r\n    \"cellPhone\": 969499282,\r\n    \"vaccinationstatus\": \"VACUNADO\",\r\n    \"vaccineDate\": \"2022-10-04\",\r\n    \"vaccineTypeId\": 2,\r\n    \"doseNumber\": 1,\r\n    \"idUser\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/employees/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employees",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "ZlLwmxDDzTyu",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "admin@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Pruebas.2022",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/oauth/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
