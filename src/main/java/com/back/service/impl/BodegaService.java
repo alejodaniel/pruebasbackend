@@ -13,21 +13,21 @@ import com.back.service.IBodegaService;
 public class BodegaService implements IBodegaService {
 
     @Autowired
-    private IBodegaDao dao ;
+    private IBodegaDao dao;
 
     @Override
     public Bodega registrar(Bodega t) {
-      return  dao.save(t);
+        return dao.save(t);
     }
 
     @Override
     public Bodega actualizar(Bodega t) {
-        return  dao.save(t);
+        return dao.save(t);
     }
 
     @Override
     public void eliminar(int id) {
-       dao.deleteById(null);
+        dao.deleteById(id);
     }
 
     @Override
@@ -48,5 +48,4 @@ public class BodegaService implements IBodegaService {
         return dao.listarvista();
     }
 
-    
 }
